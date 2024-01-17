@@ -2,7 +2,9 @@
 import random
 import math
 number = random.randint(-10000, 10000)
-n = abs(number) % 10
+n = number % 10
+if number < 0:
+    n = n - 10
 if 0 < n < 6:
     str = "and is less than 6 and not 0"
 elif n > 5:
