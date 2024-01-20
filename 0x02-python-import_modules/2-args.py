@@ -9,5 +9,5 @@ if __name__ == "__main__":
         print("1: {}".format(av[1]))
     else:
         print("{} arguments:".format(j-1))
-        for i in range(1,j):
+        for i in range(1, j):
             print("{}: {}".format(i, av[i]))
