@@ -4,9 +4,10 @@ def roman_to_int(roman_string):
         return 0
     r = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     s = 0
-    for i in range(len(roman_string)):
+    ss = len(roman_string)
+    for i in range(ss):
         c = r[roman_string[i]] * (roman_string[i] in r)
-        if i < len(roman_string) - 1 and r[roman_string[i]] < r[roman_string[i + 1]]:
+        if i < ss - 1 and r[roman_string[i]] < r[roman_string[i + 1]]:
             s -= c
         else:
             s += c
