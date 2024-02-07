@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-class my_square:
+class Square:
     pass
-Square = my_square()
