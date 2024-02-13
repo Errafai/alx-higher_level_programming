@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""module of the square class"""
+
 class Square:
-    """empty square"""
+    """define empty class square"""
     pass
