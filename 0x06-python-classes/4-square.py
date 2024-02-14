@@ -6,6 +6,19 @@ class Square:
     """the square classs with the attribute size."""
 
     def __init__(self, size=0):
+        """the constructor.
+        Args:
+            size (int): the size of the square
+        """
+        self.size = size
+
+    @property
+    def size(self):
+        """get the size."""
+        return self.__size
+
+    @size.setter
+    def size(self, value):
         """initialize the size of the square.
 
         Args:
@@ -20,14 +33,6 @@ class Square:
         if size < 0:
             raise ValueError('size must be >= 0')
         self.__size = size
-
-    def size(self):
-        """get the size.
-
-        Return:
-            int: the size of the square
-        """
-        return self.__size
 
     def area(self):
         """calculate the area of the square.
