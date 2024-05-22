@@ -1,2 +1,2 @@
 SHOW DATABASES
---show all data base for the current user
+-- show all data base for the current user
