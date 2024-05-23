@@ -1,2 +1,2 @@
 -- show full discription of a table
-COMMIT;
+SHOW CREATE TABLE first_table;
