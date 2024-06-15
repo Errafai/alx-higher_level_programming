@@ -47,8 +47,7 @@ class Square:
         if not isinstance(position, tuple) or len(position) != 2 or \
                 not all(isinstance(item, int) for item in position) or \
                 not all(item >= 0 for item in position):
-            raise TypeError('position must be a tuple \
-                    of 2 positive integers')
+            raise TypeError('position must be a tuple of 2 positive integers')
         self.__position = position
 
     def my_print(self):
