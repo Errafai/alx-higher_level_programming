@@ -54,6 +54,7 @@ class Square:
         """print the square using size."""
         if self.__size == 0:
             print()
+            return
         print('\n'* self.__position[1] , end="")
         for i in range(0, self.__size):
             print(" " * self.__position[0], end="")
