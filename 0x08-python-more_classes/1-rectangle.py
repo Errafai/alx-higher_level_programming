@@ -9,7 +9,7 @@ class Rectangle:
         hight (int): the hight of the rectangle
 
     """
-    def __init__(self, width=0, hight=0):
+    def __init__(self, width=0, height=0):
         """initialising the with and hight of the rectangle
 
             Args:
@@ -17,7 +17,7 @@ class Rectangle:
                 hight (int): the hight of the rectangle
         """
         self.width = width
-        self.hight = hight
+        self.height = height
 
     @property
     def width(self):
@@ -43,24 +43,24 @@ class Rectangle:
         self.__width = value
 
     @property
-    def hight(self):
+    def height(self):
         """getter function for the hight
         Returns:
         int: the value of the hight
         """
-        return self.__hight
+        return self.__height
 
-    @hight.setter
-    def hight(self, value):
-        """setter function of the hight
+    @height.setter
+    def height(self, value):
+        """setter function of the height
         Args:
-            value (int): the value to be set in the hight
+            value (int): the value to be set in the height
         Raises:
-            TypeError: if the hight is not an integer
+            TypeError: if the height is not an integer
             ValueError: if the value is less than zero
         """
         if not isinstance(value, int):
-            raise TypeError("hight must be an integer")
+            raise TypeError("height must be an integer")
         if value <= 0:
-            raise ValueError("hight must be >= 0")
-        self.__hight = value
+            raise ValueError("height must be >= 0")
+        self.__height = value
