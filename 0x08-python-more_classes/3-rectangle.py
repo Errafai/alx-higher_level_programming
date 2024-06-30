@@ -78,5 +78,6 @@ class Rectangle:
     def __str__(self):
         """return a string thar represent the string"""
         rect = ["#" * self.__width for i in range(self.__height)]
-
+        if self.__width == 0 or self.height == 0:
+            return ""
         return "\n".join(rect)
