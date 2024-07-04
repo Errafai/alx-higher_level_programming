@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def lookup(obj):
-    li = []
-    for i in obj.__dict__:
-        li.append(i)
-    return li
+    """return a list of all attributes and variables
+    and methods of an object"""
+    return dir(obj)
