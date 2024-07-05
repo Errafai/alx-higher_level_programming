@@ -1,0 +1,34 @@
+==============================================
+how to use the function of the subclass MyList
+==============================================
+
+the function ``print_sorted()`` wich print the sorted list of MyList
+
+Usage:
+======
+::
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>> r = Mylist([2,1,0]).print.sorted()
+	[0, 1, 2]
+
+::
+working also with negative values
+::
+
+	>>> r = Mylist([-1,-3,-2]).print.sorted()
+	[-3, -2, -1]
+
+::
+
+we can use it with floating point values
+
+	>>> r = Mylist([-1.2,3,0.4]).print.sorted()
+	[-1.2, 0.4, 3]
+
+
+
+
+
+
+
