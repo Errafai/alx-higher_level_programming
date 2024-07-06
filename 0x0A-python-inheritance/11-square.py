@@ -18,3 +18,9 @@ class Square(Rectangle):
         super().integer_validator("size", size)
         self.__size = size
         super().__init__(size, size)
+
+    def __str__(self):
+        """use this format [square] <width>/<height> when printing"""
+
+        shape = self.__class__.__name__
+        return "[{}] {}/{}".format(shape, self.__size, self.__size)
