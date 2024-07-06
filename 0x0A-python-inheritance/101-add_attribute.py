@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """contains the add_attribute"""
 
+
 def add_attribute(obj, attr, value):
     """adds an attribue to the obj class
 
