@@ -10,5 +10,5 @@ def read_file(filename=""):
         filename (str): the name of the file
     """
 
-    with open(filename, encoding="utf-8") as f:
+    with open(filename, "r", encoding="utf-8") as f:
         print(f.read().rstrip())
