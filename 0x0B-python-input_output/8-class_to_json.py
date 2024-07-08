@@ -4,6 +4,7 @@ instance of a class to json string"""
 
 
 import json
+"""to use the dump functions"""
 
 
 def class_to_json(obj):
