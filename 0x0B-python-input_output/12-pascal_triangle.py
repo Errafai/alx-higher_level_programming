@@ -8,7 +8,7 @@ def pascal_triangle(n):
 
     tr = []
     if n <= 0:
-        return tr
+        return [[]]
     tr.append([1])
     if n == 0:
         return tr
