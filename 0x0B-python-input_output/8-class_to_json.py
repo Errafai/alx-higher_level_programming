@@ -11,4 +11,4 @@ def class_to_json(obj):
     """this function usese the __dict__ atttibute to
     convert the obj to json string"""
 
-    return json.dumps(obj.__dict__)
+    return obj.__dict__
