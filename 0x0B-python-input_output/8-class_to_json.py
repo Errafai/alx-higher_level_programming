@@ -3,10 +3,6 @@
 instance of a class to json string"""
 
 
-import json
-"""to use the dump functions"""
-
-
 def class_to_json(obj):
     """this function usese the __dict__ atttibute to
     convert the obj to json string"""
