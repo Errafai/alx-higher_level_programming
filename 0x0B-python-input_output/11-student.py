@@ -33,7 +33,5 @@ class Student:
     def reload_from_json(self, json):
         """change student attribute"""
 
-        if json is None:
-            return 0
-        for key in self.__dict__:
-            self.__dict__[key] = json[key]
+        for key, value in json.items():
+            setattr(self, key, value)
