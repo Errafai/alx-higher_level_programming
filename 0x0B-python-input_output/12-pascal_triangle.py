@@ -8,13 +8,11 @@ def pascal_triangle(n):
 
     tr = []
     if n <= 0:
-        return [[]]
+        return []
     tr.append([1])
-    if n == 0:
-        return tr
-    tr.append([1, 1])
     if n == 1:
         return tr
+    tr.append([1, 1])
     for i in range(2, n):
         ll = []
         ll.append(1)
