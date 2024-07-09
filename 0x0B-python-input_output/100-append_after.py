@@ -24,4 +24,3 @@ def append_after(filename="", search_string="", new_string=""):
             i += 1
         file.seek(0)
         file.write("".join(lines))
-
