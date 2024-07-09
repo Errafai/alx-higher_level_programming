@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""this module reads the input in stdin and use those information
+to pring the file sizes and status code the number of reptation of
+status code"""
+
+
 import sys
 i = 0
 a = 0
