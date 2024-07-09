@@ -13,7 +13,7 @@ for line in sys.stdin:
     list1 = string[-2:]
     a += int(list1[-1])
     list3.append(list1[0])
-    if (i % 10 == 0 and i != 0):
+    if (i % 10 == 9):
         dict1 = {key: list3.count(key) for key in list3}
         print("File size: {:d}".format(int(a)))
         dict1 = {k: dict1[k] for k in sorted(dict1)}
