@@ -15,10 +15,10 @@ for line in sys.stdin:
     list3.append(list1[0])
     if (i % 10 == 0 and i != 0):
         dict1 = {key: list3.count(key) for key in list3}
-        print("File size: {}".format(a))
+        print("File size: {:d}".format(int(a)))
         dict1 = {k: dict1[k] for k in sorted(dict1)}
         for key, value in dict1.items():
-            print("{}: {}".format(key, value))
+            print("{:d}: {:d}".format(int(key), int(value)))
         dict1 = {}
         list3 = []
     i += 1
