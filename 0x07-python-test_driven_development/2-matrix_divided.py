@@ -14,23 +14,13 @@ def matrix_divided(matrix, div):
                    if div is not a number
         ZeroDevisionError: if div equal to zero
     """
-    if (not isinstance(matrix, list) or matrix == []
-            or not all(isinstance(row, list)
-            and all(isinstance(c, (int, float))
-            for c in row) for row in matrix)):
+    if (not isinstance(matrix, list) or matrix == [] or
+        not all(isinstance(row, list) and
+                all(isinstance(c, (int, float))
+                for c in row) for row in matrix)):
         raise TypeError(
                 "matrix must be a matrix (list of lists) of integers/floats"
                 )
-    for row in matrix:
-        if not isinstance(row, list):
-            raise TypeError(
-                    "matrix must be a matrix (list of lists) of integers/floats"
-                    )
-        for c in row:
-            if not isinstance(c, (int, float)):
-                raise TypeError(
-                            "matrix must be a matrix (list of lists) of integers/floats"
-                                )
     if div == 0:
         raise ZeroDivisionError("division by zero")
     if not isinstance(div, (int, float)):
