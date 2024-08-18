@@ -2,8 +2,8 @@
 
 | File      | Description |
 | ----------- | ----------- |
-| [0-add_integer.py](./0-add_integer.py) | 0-add_integer.py |
-| [tests/0-add_integer.txt](./tests/0-add_integer.txt) | tests/0-add_integer.txt |
+| [0-add_integer.py](./0-add_integer.py) | 0-add_integer.py | this file contian the add_integer method that let add to integers to gother.
+| [tests/0-add_integer.txt](./tests/0-add_integer.txt) | tests/0-add_integer.txt | this text file contain the test cases for the add_integer function with all types of cases.
 | [2-matrix_divided.py](./2-matrix_divided.py) | 2-matrix_divided.py |
 | [tests/2-matrix_divided.txt](./tests/2-matrix_divided.txt) | tests/2-matrix_divided.txt |
 | [3-say_my_name.py](./3-say_my_name.py) | 3-say_my_name.py |
