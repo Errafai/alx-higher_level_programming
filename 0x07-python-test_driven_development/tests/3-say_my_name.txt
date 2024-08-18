@@ -1,0 +1,80 @@
+say_my_name(first_name, last_name="")
+=====================================
+
+this function print the fist name and last name in this format "My name is <first name> <last name>"
+
+:parameters:
+	**first_name** : str
+			the first name of the person
+	**last_name** : str
+			the last nmae of the person
+
+:return:
+	there is no return just print in simple format "My name is <first name> <last name>"
+
+:raises:
+	**TypeError** :
+		if the last name is not a string
+		and if the first name is not a string
+:Example:
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name("John", "Smith")
+	My name is John Smith
+
+:Normale Usage:
+::
+
+	>>> say_my_name("Walter", "White")
+	My name is Walter White
+	>>> say_my_name("Bob") #doctest: +NORMALIZE_WHITESPACE
+	My name is Bob 
+
+:Edge Cases:
+	the function should work with empty strings, single-character and mixed case
+
+::
+
+	>>> say_my_name("", "luffy")
+	My name is  luffy
+	>>> say_my_name("D", "luffy")
+	My name is D luffy
+	>>> say_my_name("monkey D", "luffy")
+	My name is monkey D luffy
+	>>> say_my_name("")
+	My name is  
+	>>> say_my_name("D")
+	My name is D 
+	>>> say_my_name("monkey D")
+	My name is monkey D 
+
+:Special Cases:
+	The function also handles special characters and whitspaces
+
+::
+
+	>>> say_my_name("3923#", "3$")
+	My name is 3923# 3$
+	>>> say_my_name("  lskd lsdk 33 ")
+	My name is   lskd lsdk 33  
+	>>> say_my_name("  ' '' '' ", "   ")
+	My name is   ' '' ''     
+
+:Error Cases:
+	The function should raise a `TypeError` if the last name or first name is not a string
+
+::
+
+	>>> say_my_name(["dlkkld"], "kdls")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+	>>> say_my_name(None)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+	>>> say_my_name("ldkd", 1223)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+	>>> say_my_name("True", False)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
