@@ -1,0 +1,83 @@
+print_square(size)
+===================
+
+This function takes a an integer and print it as a square of that size
+
+:Parameter:
+	**size** : int
+		the size of the square
+
+:Returns:
+	No returns it justing pring a square using the character `#`
+
+:Raises:
+	**TypeError** :
+		if the size is not an integer
+	**ValueError** :
+		if the size is negative
+
+:Normale Usage:
+	Let see how the function works
+
+	::
+
+		>>> print_square = __import__('4-print_square').print_square
+		>>> print_square(4)
+		####
+		####
+		####
+		####
+		>>> print_square(10)
+		##########
+		##########
+		##########
+		##########
+		##########
+		##########
+		##########
+		##########
+		##########
+		##########
+
+:Edge Cases:
+	this function can't handle negative numbers or empthy size or float point numbers
+
+	::
+
+		>>> print_square(-4)
+		Traceback (most recent call last):
+		ValueError: size must be >= 0
+		>>> print_square(332.22)
+		Traceback (most recent call last):
+		TypeError: size must be an integer
+
+:Special Cases:
+	this function can handle size equale to 0 or an oparation that return an integer
+
+	::
+
+		>>> print_square(0) == None
+		True
+		>>> print_square(3*3-2)
+		#######
+		#######
+		#######
+		#######
+		#######
+		#######
+		#######
+
+:Error Cases:
+	this function should raise a `TypeError` if the size is not an integer
+
+	::
+
+		>>> print_square("ddl")
+		Traceback (most recent call last):
+		TypeError: size must be an integer
+		>>> print_square([2])
+		Traceback (most recent call last):
+		TypeError: size must be an integer
+		>>> print_square(True)
+		Traceback (most recent call last):
+		TypeError: size must be an integer
