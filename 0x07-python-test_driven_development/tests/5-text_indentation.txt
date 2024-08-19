@@ -121,6 +121,8 @@ text_indentation(text)
 		<BLANKLINE>
 		    here we are.
 		<BLANKLINE>
+		>>> text = "    "
+		>>> text_indentation(text) #doctest: +NORMALIZE_WHITESPACE
 		    
 :Error Cases:
 

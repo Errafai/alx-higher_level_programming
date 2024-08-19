@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """this module contain a function that split strings"""
 
+
 def text_indentation(text):
     """this function split the text if he finds these delimeters `.`, `?`
     and `:`, and replace it with 2 new lines
