@@ -124,6 +124,10 @@ text_indentation(text)
 		>>> text = "    "
 		>>> text_indentation(text) #doctest: +NORMALIZE_WHITESPACE
 		    
+		>>> text_indentation(" tlke.")
+		tlke.
+		<BLANKLINE>
+
 :Error Cases:
 
 	this function raise a typeError if the argument is not a sting
