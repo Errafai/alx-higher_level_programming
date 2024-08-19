@@ -35,7 +35,9 @@ text_indentation(text)
 		this function can handle small input, large ones, and multiple delimiters
 
 	::
-
+		>>> text = "there is no delimeters"
+		>>> text_indentation(text)
+		there is no delimeters
 		>>> text = """Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
 		... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
 		... Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
