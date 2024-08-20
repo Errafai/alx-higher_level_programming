@@ -28,6 +28,31 @@ class Square(Rectangle):
         self.width = size
         self.height = size
 
+    def update(self, *args, **kwargs):
+        """update the value of all attributes"""
+
+        i = 0
+        for key in self.__dict__:
+            if i == len(args) or len(args) == 0:
+                break
+            if i == 1:
+                self.size = args[i]
+                i += 1
+                continue
+
+            if "height" in key:
+                continue
+
+            self.__dict__[key] = args[i]
+            i += 1
+
+        if len(kwargs) != 0:
+            for key, value in kwargs.items():
+                if key == "size":
+                    self.size = value
+                    continue
+                setattr(self, key, value)
+
     def __str__(self):
         """retpresent the square class infomations"""
 
