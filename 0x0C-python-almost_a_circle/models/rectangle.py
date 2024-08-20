@@ -94,7 +94,10 @@ class Rectangle(Base):
     def display(self):
         """displays the rectangle in the screen using the charctar `#`"""
 
+        print("\n" * self.__y, end="")
+
         for i in range(self.__height):
+            print(self.__x * " ", end="")
             print("#" * self.__width)
 
     def __str__(self):
