@@ -99,6 +99,6 @@ class Rectangle(Base):
 
     def __str__(self):
         """represent the rectange informations"""
-        rectangle = ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
-                    self.__y, self.__width, self.__height))
+        rectangle = ("[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height))
         return rectangle
