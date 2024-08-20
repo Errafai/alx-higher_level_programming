@@ -101,12 +101,14 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """update the value of all attributes"""
+
         i = 0
         for key in self.__dict__:
             if i == len(args) or len(args) == 0:
                 break
             self.__dict__[key] = args[i]
             i += 1
+
         if len(kwargs) != 0:
             for key, value in kwargs.items():
                 setattr(self, key, value)
@@ -116,3 +118,9 @@ class Rectangle(Base):
         rectangle = ("[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height))
         return rectangle
+
+    def to_dictionary(self):
+        """ return a dictionnary repsentation """
+        rep = "'x': {}, 'y': {}, 'id': {}, 'height': {}, 'width': {}".format(
+                self.__x, self.__y, self.id, self.__height, self.__width)
+        return eval("{" + rep + "}")
