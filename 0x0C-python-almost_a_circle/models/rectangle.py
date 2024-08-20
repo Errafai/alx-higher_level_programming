@@ -2,7 +2,7 @@
 """this module contain the rectangle class"""
 
 from models.base import Base
-
+import json
 
 class Rectangle(Base):
     """Represent the Rectangle class"""
