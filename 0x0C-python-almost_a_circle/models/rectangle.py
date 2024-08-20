@@ -99,14 +99,17 @@ class Rectangle(Base):
             print(self.__x * " ", end="")
             print("#" * self.__width)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update the value of all attributes"""
         i = 0
         for key in self.__dict__:
+            if i == len(args) or len(args) == 0:
+                break
             self.__dict__[key] = args[i]
             i += 1
-            if i == len(args):
-                break
+        if len(kwargs) != 0:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def __str__(self):
         """represent the rectange informations"""
