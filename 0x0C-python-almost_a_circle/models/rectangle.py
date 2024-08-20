@@ -17,12 +17,11 @@ class Rectangle(Base):
             y (int): the position of the rectangle in the y axis
             id (int): the id of the created shape
         """
-
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     @property
     def width(self):
@@ -99,6 +98,15 @@ class Rectangle(Base):
         for i in range(self.__height):
             print(self.__x * " ", end="")
             print("#" * self.__width)
+
+    def update(self, *args):
+        """update the value of all attributes"""
+        i = 0
+        for key in self.__dict__:
+            self.__dict__[key] = args[i]
+            i += 1
+            if i == len(args):
+                break
 
     def __str__(self):
         """represent the rectange informations"""
