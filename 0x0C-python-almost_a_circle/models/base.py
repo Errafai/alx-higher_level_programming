@@ -39,7 +39,7 @@ class Base:
         else:
             recs = [r.to_dictionary() for r in list_objs]
 
-        filename = type(cls).__name__ + ".json"
+        filename = cls.__name__ + ".json"
         with open(filename, "w+") as file:
             json_string = cls.to_json_string(recs)
             file.write(json_string)
