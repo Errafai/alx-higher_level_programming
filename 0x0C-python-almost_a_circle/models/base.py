@@ -66,3 +66,19 @@ class Base:
         dummy.update(**dictionary)
 
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """get instances data from a a json file"""
+
+        filename = cls.__name__ + '.json'
+        try:
+            with open(filename, "r") as file:
+
+                rectangles = file.read()
+                rects_list = cls.from_json_string(rectangles)
+                new_rects = [cls.create(**r) for r in rects_list]
+                return new_rects
+
+        except FileNotFoundError:
+            return []
