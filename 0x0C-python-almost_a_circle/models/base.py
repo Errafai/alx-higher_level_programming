@@ -58,7 +58,10 @@ class Base:
         """create new intance of the cls type and assigne
         attribute that already exist in the dictionary"""
 
-        dummy = cls(34, 2, 1)
+        if cls.__name__ == "Rectangle":
+            dummy = cls(34, 2)
+        else:
+            dummy = cls(3)
 
         dummy.update(**dictionary)
 
