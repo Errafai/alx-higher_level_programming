@@ -44,3 +44,11 @@ class Base:
         with open(filename, "w") as file:
             json_string = Base.to_json_string(recs)
             file.write(json_string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """transform a json string into a list of dict in python"""
+
+        if json_string is None or json_string == "[]":
+            return []
+        return json.loads(json_string)
