@@ -55,10 +55,10 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """create new intance of the cls type and assigne attribute that already
-        exist in the dictionary"""
+        """create new intance of the cls type and assigne
+        attribute that already exist in the dictionary"""
 
-        dummy = cls(23,22)
+        dummy = cls(23, 22, 22, 22, 22)
 
         dummy.update(**dictionary)
 
