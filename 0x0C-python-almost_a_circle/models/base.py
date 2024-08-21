@@ -58,7 +58,7 @@ class Base:
         """create new intance of the cls type and assigne
         attribute that already exist in the dictionary"""
 
-        dummy = cls()
+        dummy = cls(3)
 
         dummy.update(**dictionary)
 
