@@ -121,6 +121,10 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """ return a dictionnary repsentation """
-        rep = "'x': {}, 'y': {}, 'id': {}, 'height': {}, 'width': {}".format(
-                self.__x, self.__y, self.id, self.__height, self.__width)
-        return eval("{" + rep + "}")
+        return {
+                "id": self.id,
+                "width": self.__width,
+                "height": self.__height,
+                "x": self.__x,
+                "y": self.__y
+            }
