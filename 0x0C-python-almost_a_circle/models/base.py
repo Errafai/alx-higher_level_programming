@@ -4,6 +4,7 @@
 
 import json
 
+
 class Base:
     """represent the base class"""
 
@@ -40,6 +41,6 @@ class Base:
             recs = [r.to_dictionary() for r in list_objs]
 
         filename = cls.__name__ + ".json"
-        with open(filename, "w+") as file:
-            json_string = cls.to_json_string(recs)
+        with open(filename, "w") as file:
+            json_string = Base.to_json_string(recs)
             file.write(json_string)
