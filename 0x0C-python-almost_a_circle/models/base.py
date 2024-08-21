@@ -52,3 +52,14 @@ class Base:
         if json_string is None or json_string == "[]":
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """create new intance of the cls type and assigne attribute that already
+        exist in the dictionary"""
+
+        dummy = cls(23,22)
+
+        dummy.update(**dictionary)
+
+        return dummy
