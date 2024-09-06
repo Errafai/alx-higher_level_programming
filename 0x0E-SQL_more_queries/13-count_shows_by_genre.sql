@@ -6,5 +6,5 @@ SELECT tv_genres.name as genre, number.number_of_shows
 		FROM tv_show_genres
 		GROUP BY genre_id
 	) AS number
-	WHERE number.genre_id = tv_genres.id
+	on number.genre_id = tv_genres.id
 	ORDER BY number_of_shows DESC;
