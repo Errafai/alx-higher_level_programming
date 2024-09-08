@@ -7,4 +7,5 @@
 		WHERE title = 'Dexter'
 	) AS shows
 	ON tv_genres.id = shows.genre_id
-	WHERE shows.genre_id IS NULL;
+	WHERE shows.genre_id IS NULL
+	ORDER BY name ASC;
