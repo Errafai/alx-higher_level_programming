@@ -14,5 +14,5 @@ if (av.length <= 3) {
       max2 = Number(item);
     }
   }
-  console.log(max2);
+  console.log(Number(max2));
 }
