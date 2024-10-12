@@ -7,7 +7,7 @@ for (const value of Object.values(dict)) {
   for (const key of Object.keys(dict)) {
     if (dict[key] === value) {
       ds[value].push(key);
-    } 
+    }
   }
 }
 console.log(ds);
