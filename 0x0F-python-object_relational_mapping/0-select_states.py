@@ -2,8 +2,10 @@
 """this module connect the hbtn_0e_0_usa module and select all data
 in the satates table """
 
+
 import MySQLdb
 import sys
+
 
 ar = sys.argv
 
