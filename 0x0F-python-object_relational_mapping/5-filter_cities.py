@@ -14,14 +14,14 @@ if __name__ == "__main__":
                                 )
     cursor = connector.cursor()
 
-    query = """SELECT DISTINCT cities.id, cities.name, states.name FROM cities
-            INNER JOIN states ON cities.state_id = states.id"""
-    cursor.execute(query)
+    query = """SELECT DISTINCT cities.name FROM cities
+            INNER JOIN states ON cities.state_id = states.id
+            WHERE states.name = %s"""
+    cursor.execute(query, (ar[4],))
 
     states = cursor.fetchall()
-
-    for state in states:
-        print(state)
+    to_list = [cities[0] for cities in states]
+    print(", ".join(to_list))
 
     cursor.close()
     connector.close()
