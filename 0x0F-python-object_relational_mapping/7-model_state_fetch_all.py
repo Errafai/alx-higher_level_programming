@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""Start link class to table in database 
-"""
+"""Start link class to table in database"""
+
+
 import sys
 from model_state import Base, State
 
@@ -15,7 +16,6 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    
+
     for state in session.query(State).order_by(State.id):
         print("{}: {}".format(state.id, state.name))
-
