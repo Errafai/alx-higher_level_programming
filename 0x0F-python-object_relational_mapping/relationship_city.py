@@ -4,7 +4,7 @@ in our database"""
 
 
 from sqlalchemy import Column, ForeignKey, String, Integer
-from model_state import Base
+from relationship_state import Base
 
 
 class City(Base):
