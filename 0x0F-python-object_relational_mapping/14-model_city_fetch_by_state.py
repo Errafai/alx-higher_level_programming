@@ -3,7 +3,8 @@
 
 
 import sys
-from model_city import Base, City
+from model_state import Base, State
+from model_city import City
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
@@ -16,5 +17,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for city in session.query(City).order_by(City.id):
-        print("{}: ({}) {}".format(city.state.name, city.id, city.name))
+    for city in (session.query(State.name, City.id, City.name)
+                .order_by(City.id).filter(State.id == City.state_id)):
+        print("{}: ({}) {}".format(city[0], city[1], city[2]))
