@@ -2,9 +2,7 @@
 """feches https://alx-intranet.hbtn.io/status and display response"""
 
 
-
 if __name__ == "__main__":
-
     import urllib.request as rq
 
     url = "https://alx-intranet.hbtn.io/status"
