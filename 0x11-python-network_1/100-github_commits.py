@@ -7,8 +7,8 @@ if __name__ == "__main__":
     import sys
 
     url = "https://api.github.com/repos/"
-    url +=  sys.argv[1] + "/" + sys.argv[2] + "/commits"
-   
+    url += sys.argv[1] + "/" + sys.argv[2] + "/commits"
+ 
     res = req.get(url)
     for i in range(10):
         data = res.json()[i]
